@@ -4,7 +4,7 @@ class ComicsController < ApplicationController
   # GET /comics or /comics.json
   def index
     @q = Comic.ransack(params[:q])
-    @comics = @q.result(distinct: true)
+    @comics = @q.result(distinct: true).page(params[:page])
   end
 
   # GET /comics/1 or /comics/1.json

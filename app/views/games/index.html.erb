@@ -1,3 +1,10 @@
+<%= search_form_for @q do |f| %>
+  <%= f.label :title_or_platform_or_status, "キーワード検索" %>
+  <%= f.search_field :title_or_platform_or_status_cont %>
+
+  <%= f.submit "検索" %>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Games</h1>
@@ -5,9 +12,9 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Platform</th>
-      <th>Status</th>
+      <th><%= sort_link(@q, :title, "Title") %></th>
+      <th><%= sort_link(@q, :platform, "Platform") %></th>
+      <th><%= sort_link(@q, :status, "Status") %></th>
       <th colspan="3"></th>
     </tr>
   </thead>

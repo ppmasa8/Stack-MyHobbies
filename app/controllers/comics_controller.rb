@@ -3,7 +3,8 @@ class ComicsController < ApplicationController
 
   # GET /comics or /comics.json
   def index
-    @comics = Comic.all
+    @q = Comic.ransack(params[:q])
+    @comics = @q.result(distinct: true)
   end
 
   # GET /comics/1 or /comics/1.json

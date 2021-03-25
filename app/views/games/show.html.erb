@@ -1,19 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @game.title %>
-</p>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Title</th>
+        <th>Platform</th>
+        <th>Status</th>
+      </tr>
+      </thead>
 
-<p>
-  <strong>Platform:</strong>
-  <%= @game.platform %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @game.status %>
-</p>
+      <tbody>
+      <tr>
+        <td><%= @game.title %></td>
+        <td><%= @game.platform %></td>
+        <td><%= @game.status %></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-2"></div>
+</div>
 
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>

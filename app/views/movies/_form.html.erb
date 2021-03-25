@@ -13,25 +13,25 @@
 
   <div class="field">
     <%= form.label :year %>
-    <%= form.number_field :year %>
+    <%= form.number_field :year, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :abstract %>
-    <%= form.text_area :abstract %>
+    <%= form.text_area :abstract, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.text_field :status %>
+    <%= form.text_field :status, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Create Idea", class: "btn btn-primary" %>
   </div>
 <% end %>

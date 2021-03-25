@@ -12,21 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :title%>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form_group">
     <%= form.label :platform %>
-    <%= form.text_field :platform %>
+    <%= form.text_field :platform, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :status %>
-    <%= form.text_field :status %>
+    <%= form.text_field :status, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Create Idea", class: "btn btn-primary" %>
   </div>
 <% end %>

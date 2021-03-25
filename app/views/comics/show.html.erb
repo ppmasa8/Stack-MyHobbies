@@ -1,24 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Year:</strong>
-  <%= @comic.year %>
-</p>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Year</th>
+        <th>Title</th>
+        <th>Abstract</th>
+        <th>Status</th>
+      </tr>
+      </thead>
 
-<p>
-  <strong>Title:</strong>
-  <%= @comic.title %>
-</p>
-
-<p>
-  <strong>Abstract:</strong>
-  <%= @comic.abstract %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @comic.status %>
-</p>
+      <tbody>
+      <tr>
+        <td><%= @comic.year %></td>
+        <td><%= @comic.title %></td>
+        <td><%= @comic.abstract %></td>
+        <td><%= @comic.status %></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-2"></div>
+</div>
 
 <%= link_to 'Edit', edit_comic_path(@comic) %> |
 <%= link_to 'Back', comics_path %>
+

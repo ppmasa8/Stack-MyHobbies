@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" class="alert-success"><%= notice %></p>
 
 <div class="row">
   <div class="col-2"></div>
@@ -22,9 +22,10 @@
       </tr>
       </tbody>
     </table>
+    <%= link_to 'Edit', edit_movie_path(@movie), class: "btn btn-secondary mb-3" %>
+    <%= link_to 'Back', movies_path, class: "btn btn-success mb-3" %>
   </div>
   <div class="col-2"></div>
 </div>
 
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+

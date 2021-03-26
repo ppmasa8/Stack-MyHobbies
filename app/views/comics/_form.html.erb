@@ -5,33 +5,33 @@
 
       <ul>
         <% comic.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+          <li class="alert-danger"><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form_group">
     <%= form.label :year %>
     <%= form.number_field :year, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form_group">
     <%= form.label :title %>
     <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form_group">
     <%= form.label :abstract %>
     <%= form.text_area :abstract, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form_group">
     <%= form.label :status %>
-    <%= form.text_field :status, class: "form-control" %>
+    <%= form.select :status ,["todo", "doing", "done"] ,{} , class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit "Create Idea", class: "btn btn-primary" %>
+    <%= form.submit "Add Comic Lists", class: "btn btn-primary mt-2" %>
   </div>
 <% end %>

@@ -8,23 +8,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <%= link_to "Homes", '/user/index', class:"nav-link" %>
+          <%= link_to "Home", '/user/index', class:"nav-link" %>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
+        <li class="nav-item active">
+          <%= link_to "Games", games_path, class:"nav-link" %>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Hobbies
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to "Games", games_path, class:"dropdown-item" %>
-            <%= link_to "Movies", movies_path, class:"dropdown-item" %>
-            <%= link_to "Comics", comics_path, class:"dropdown-item" %>
-          </div>
+        <li class="nav-item active">
+          <%= link_to "Movies", movies_path, class:"nav-link" %>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Coming soon...</a>
+        <li class="nav-item active">
+          <%= link_to "Comics", comics_path, class:"nav-link" %>
         </li>
       </ul>
     </div>

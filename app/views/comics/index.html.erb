@@ -1,18 +1,17 @@
+<p id="notice" class="alert-success"><%= notice %></p>
+
 <div class="row">
   <div class="col-3"></div>
   <div class="col-6">
     <%= search_form_for @q do |f| %>
-      <%= f.label :year_or_title_or_abstract_or_status, "キーワード検索" %>
-      <%= f.search_field :year_or_title_or_abstract_or_status_cont, class: "form-control" %>
+      <%= f.label :year_or_title_or_abstract_or_status, "Search Keywords", class: "mt-2" %>
+      <%= f.search_field :year_or_title_or_abstract_or_status_cont, class: "form-control mb-2" %>
 
-      <%= f.submit "検索", class: "btn btn-primary" %>
+      <%= f.submit "Search", class: "btn btn-primary" %>
     <% end %>
   </div>
   <div class="col-3"></div>
 </div>
-
-
-<p id="notice"><%= notice %></p>
 
 <div class="row">
   <div class="col-2"></div>
@@ -36,7 +35,14 @@
           <td><%= comic.year %></td>
           <td><%= comic.title %></td>
           <td><%= comic.abstract %></td>
-          <td><%= comic.status %></td>
+          <% case comic.status %>
+          <% when "todo" %>
+            <td class="alert-warning"><%= comic.status %></td>
+          <% when "doing" %>
+            <td class="alert-success"><%= comic.status %></td>
+          <% when "done" %>
+            <td class="alert-secondary"><%= comic.status %></td>
+          <% end %>
           <td><%= link_to 'Show', comic %></td>
           <td><%= link_to 'Edit', edit_comic_path(comic) %></td>
           <td><%= link_to 'Destroy', comic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -47,7 +53,7 @@
 
     <br>
     <%= paginate @comics %>
-    <%= link_to 'New Comic', new_comic_path %>
+    <%= link_to 'New Comic', new_comic_path, class: "btn btn-primary mb-5"%>
   </div>
   <div class="col-2"></div>
 </div>

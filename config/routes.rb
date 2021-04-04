@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  # root to: "user#index"
   root 'user#index'
   get 'user/index'
   resources :comics

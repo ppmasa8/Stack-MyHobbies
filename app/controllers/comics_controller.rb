@@ -1,5 +1,6 @@
 class ComicsController < ApplicationController
   before_action :set_comic, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /comics or /comics.json
   def index

@@ -25,7 +25,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'ransack'
 # Pagination
 gem 'kaminari'
-
+# Login
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 # gem 'image_processing', '~> 1.2'
 

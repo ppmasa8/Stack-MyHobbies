@@ -12,6 +12,7 @@
 * ステータス色分け機能
 * 検索機能
 * ソート機能（ステータスやタイトル、年代順などそれぞれの項目ごとにソートできます）
+* ログイン機能（仮）
 * ページネーション機能
 * 単体テスト
 
@@ -22,6 +23,7 @@
 * webpacker
 * bootstrap
 * ransack
+* devise (i18nを含む)
 * kaminari
 * byebug
 * rspec-rails

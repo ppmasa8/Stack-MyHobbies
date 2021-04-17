@@ -21,7 +21,8 @@
 ## アプリケーション内で使用しているgem一覧
 * ruby 2.6.6
 * rails 6.0.3
-* sqlite3
+* sqlite3 (開発用)
+* postgres (本番用)
 * webpacker
 * bootstrap
 * ransack

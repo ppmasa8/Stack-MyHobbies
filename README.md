@@ -5,6 +5,8 @@
 * todo doing doneの３つのステータスから選択して、分類することができ、積ん読もしくは積みゲーなどの管理の助けになるアプリです。
 * URL:https://track-my-hobbies.herokuapp.com/
 * （まだ画像アップロードができておりません）
+![demo](https://user-images.githubusercontent.com/75968942/117809055-a2bcfe00-b298-11eb-97ff-503ac6519827.gif)
+
 
 ## アプリケーションの機能一覧
 * コンテンツ追加機能
